@@ -6,8 +6,8 @@ export const Reviews = ({reviews}: {reviews: ReviewModel[]}) => {
         <div className="reviews">
             <h3>Отзывы</h3>
             <ul>
-                {reviews.map(({text}) => (
-                    <li key={text}>{text}</li>
+                {reviews.map(({text, id}) => (
+                    <li key={id}>{text}</li>
                 ))}
             </ul>
         </div>

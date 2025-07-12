@@ -2,12 +2,12 @@ import {useState} from 'react';
 import type {RestaurantModel} from '../models/restaurant.model.ts';
 
 export const useActiveRestaurant = (restaurants: RestaurantModel[]) => {
-    const [activeId, setActiveId] = useState(restaurants[0]?.id || null);
+    const [activeId, setActiveRestaurantId] = useState(restaurants[0]?.id || null);
 
-    const activeRestaurant = restaurants.find((restaraunt) => restaraunt.id === activeId);
+    const activeRestaurant = restaurants.find(({id}) => id === activeId);
 
     return {
         activeRestaurant,
-        setActiveId
+        setActiveRestaurantId
     };
 };

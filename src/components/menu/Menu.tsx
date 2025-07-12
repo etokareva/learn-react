@@ -6,8 +6,8 @@ export const Menu = ({menu}: {menu: MenuItemModel[]}) => {
         <div className="menu">
             <h3>Меню</h3>
             <ul>
-                {menu.map(({name}) => (
-                    <li key={name}>{name}</li>
+                {menu.map(({name, id}) => (
+                    <li key={id}>{name}</li>
                 ))}
             </ul>
         </div>
