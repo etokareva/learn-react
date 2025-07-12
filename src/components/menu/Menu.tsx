@@ -1,9 +1,9 @@
 import type {MenuItemModel} from '../../models/menu-item.model.ts';
 
-export const Menu = ({menu, id}: {menu: MenuItemModel[], id: string}) => {
+export const Menu = ({menu}: {menu: MenuItemModel[]}) => {
 
     return (
-        <div className="menu" key={id}>
+        <div className="menu">
             <h3>Меню</h3>
             <ul>
                 {menu.map(({name}) => (

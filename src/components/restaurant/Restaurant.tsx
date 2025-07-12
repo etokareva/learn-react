@@ -1,4 +1,5 @@
 import type {RestaurantModel} from '../../models/restaurant.model.ts';
+import {Counter} from '../Counter/Counter.tsx';
 import {Menu} from '../menu/Menu.tsx';
 import {Reviews} from '../reviews/Reviews.tsx';
 
