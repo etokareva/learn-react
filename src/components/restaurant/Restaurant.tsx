@@ -9,8 +9,9 @@ export const Restaurant = ({restaurant}: {restaurant: RestaurantModel}) => {
     return (
         <div className="restaurant" key={id}>
             <h2>{name}</h2>
-            <Menu menu={menu} id={id} />
-            <Reviews reviews={reviews} id={id} />
+            <Menu menu={menu} key={id} />
+            {reviews?.length ? <Reviews reviews={reviews} key={id} /> : <div>Нет отзывов</div>}
+            <Counter />
         </div>
     )
 }
