@@ -11,20 +11,18 @@ export const RestaurantPage = ({restaurants, title}: RestaurantPageModel) => {
             <div className="restaurant-tabs">
                 {restaurants.map((restaurant) => (
                     <button key={restaurant.id}
-                            className={`tab-button ${
-                                restaurant.id === activeRestaurant.id ? 'active' : ''
-                            }`}
+                            className={`tab-button ${restaurant.id === activeRestaurant.id ? 'active' : ''}`}
                             onClick={() => setActiveId(restaurant.id)}
                     >
                         {restaurant.name}
                     </button>
                 ))}
             </div>
-            {activeRestaurant ? (
-                <Restaurant key={activeRestaurant.id} restaurant={activeRestaurant}/>
-            ) : (
-                <div>Ресторан не найден</div>
-            )}
+            {
+                activeRestaurant
+                    ? <Restaurant key={activeRestaurant.id} restaurant={activeRestaurant}/>
+                    : <div>Ресторан не найден</div>
+            }
         </>
     );
 };
