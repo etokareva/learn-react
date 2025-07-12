@@ -8,19 +8,19 @@ const reactRoot = createRoot(root);
 reactRoot.render(
     <div className='restaurants'>
         <h1>Рестораны</h1>
-        {restaurants.map((restaurant) => (
-            <div className="restaurant">
-                <h2 className='restaurant'>{restaurant.name}</h2>
+        {restaurants.map(({id, name, menu, reviews}) => (
+            <div className="restaurant" key={id}>
+                <h2 className='restaurant'>{name}</h2>
                 <h3>Меню</h3>
                 <ul>
-                    {restaurant.menu.map((item) => (
-                        <li>{item.name}</li>
+                    {menu.map(({name}) => (
+                        <li key={name}>{name}</li>
                     ))}
                 </ul>
                 <h3>Отзывы</h3>
                 <ul>
-                    {restaurant.reviews.map((review) => (
-                        <li>{review.text}</li>
+                    {reviews.map(({text}) => (
+                        <li key={text}>{text}</li>
                     ))}
                 </ul>
             </div>
