@@ -1,4 +1,4 @@
-import {useCounter} from './hooks.ts';
+import {useCounter} from './counter.hook.ts';
 
 export const Counter = () => {
     const {increment, decrement, value} = useCounter();
