@@ -6,8 +6,8 @@ import {useActiveRestaurant} from './restaraunt.hook.ts';
 export const RestaurantPage = ({restaurants, title}: RestaurantPageModel) => {
     const {activeRestaurant, setActiveRestaurantId} = useActiveRestaurant(restaurants);
 
-    const handleSetActiveRestaurantId = (id) => {
-        if (activeRestaurant.id === id) return;
+    const handleSetActiveRestaurantId = (id: string) => {
+        if (activeRestaurant?.id === id) return;
 
         setActiveRestaurantId(id);
     }
@@ -20,15 +20,13 @@ export const RestaurantPage = ({restaurants, title}: RestaurantPageModel) => {
                     <Tab key={id}
                          title={name}
                          onClick={() => handleSetActiveRestaurantId(id)}
-                         isActive={id === activeRestaurant.id}>
+                         isActive={id === activeRestaurant?.id}>
                     </Tab>
                 ))}
             </div>
-            {
-                activeRestaurant
-                    ? <Restaurant restaurant={activeRestaurant}/>
-                    : <div>Ресторан не найден</div>
-            }
+            <Restaurant key={activeRestaurant.id}
+                        restaurant={activeRestaurant}
+            />
         </>
     );
 };
