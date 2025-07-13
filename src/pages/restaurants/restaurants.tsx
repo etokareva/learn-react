@@ -1,9 +1,9 @@
-import {Restaurant} from '../../components/restaurant/Restaurant.tsx';
-import {Tab} from '../../components/tab/Tab.tsx';
+import {Restaurant} from '../../components/restaurant/restaurant.tsx';
+import {Tab} from '../../components/tab/tab.tsx';
 import type {RestaurantPageModel} from '../../models/restaurant-page.model.ts';
 import {useActiveRestaurant} from './restaraunt.hook.ts';
 
-export const RestaurantPage = ({restaurants, title}: RestaurantPageModel) => {
+export const Restaurants = ({restaurants, title}: RestaurantPageModel) => {
     const {activeRestaurant, setActiveRestaurantId} = useActiveRestaurant(restaurants);
 
     const handleSetActiveRestaurantId = (id: string) => {

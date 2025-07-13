@@ -1,7 +1,7 @@
 import type {RestaurantModel} from '../../models/restaurant.model.ts';
-import {Counter} from '../counter/Counter.tsx';
-import {Menu} from '../menu/Menu.tsx';
-import {Reviews} from '../reviews/Reviews.tsx';
+import {Counter} from '../counter/counter.tsx';
+import {Menu} from '../menu/menu.tsx';
+import {Reviews} from '../reviews/reviews.tsx';
 
 export const Restaurant = ({restaurant}: {restaurant: RestaurantModel}) => {
     const {name, reviews, menu} = restaurant;
