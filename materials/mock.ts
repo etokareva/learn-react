@@ -1,6 +1,6 @@
-import type {Restaurant} from '../models/restaurant.model.ts';
+import type {RestaurantModel} from '../src/models/restaurant.model.ts';
 
-export const restaurants: Restaurant[] = [
+export const restaurants: RestaurantModel[] = [
   {
     id: "a757a0e9-03c1-4a2a-b384-8ac21dbe2fb2",
     name: "Dishoom",
