@@ -1,13 +1,13 @@
-import {useCounter} from './counter.hook.ts';
+type CounterProps = {
+    value: number;
+    onIncrement: () => void;
+    onDecrement: () => void;
+};
 
-export const Counter = () => {
-    const {increment, decrement, value} = useCounter();
-
-    return (
-        <div className="counter">
-            <button onClick={decrement}>-</button>
-            <span>{value}</span>
-            <button onClick={increment}>+</button>
-        </div>
-    )
-}
+export const Counter = ({value, onIncrement, onDecrement}: CounterProps) => (
+    <div className="counter">
+        <button onClick={onDecrement}>-</button>
+        <span>{value}</span>
+        <button onClick={onIncrement}>+</button>
+    </div>
+);
