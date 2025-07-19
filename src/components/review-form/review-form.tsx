@@ -10,7 +10,7 @@ export const ReviewForm = () => {
     } = useReviewForm();
 
     return (
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
             <div className="form-group">
                 <label>Имя</label>
                 <input
