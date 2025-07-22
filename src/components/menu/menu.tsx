@@ -10,7 +10,7 @@ export const Menu = ({menu}: {menu: MenuItemModel[]}) => {
                 {menu.map(({name, id}) => (
                     <li key={id}>
                         <label>{name}</label>
-                        <DishCounter />
+                        <DishCounter/>
                     </li>
                 ))}
             </ul>

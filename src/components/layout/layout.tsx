@@ -1,10 +1,10 @@
 import type {PropsWithChildren} from 'react';
 import {ScrollProgress} from '../scroll-progress/scroll-progress.tsx';
 
-export const Layout = ({children} : PropsWithChildren) => {
+export const Layout = ({children}: PropsWithChildren) => {
     return (
         <>
-            <ScrollProgress />
+            <ScrollProgress/>
             <header></header>
             <main>{children}</main>
             <aside></aside>
