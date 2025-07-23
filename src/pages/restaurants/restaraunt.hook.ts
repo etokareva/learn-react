@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import type {RestaurantModel} from '../models/restaurant.model.ts';
+import type {RestaurantModel} from '../../models/restaurant.model.ts';
 
 export const useActiveRestaurant = (restaurants: RestaurantModel[]) => {
     const [activeId, setActiveRestaurantId] = useState(restaurants[0]?.id || null);
