@@ -1,36 +1,47 @@
 @import '../../styles/variables.css';
 
 .layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header, footer {
-  background: var(--color-dark);
-  color: var(--color-light);
-  padding: 1rem;
-  text-align: center;
+    background: var(--color-dark);
+    color: var(--color-light);
+    padding: 1rem;
+    text-align: center;
 }
 
 main {
-  flex: 1;
-  padding: 1rem;
+    flex: 1;
+    padding: 1rem;
 }
 
 @media (min-width: 768px) {
-  .layout {
-    display: grid;
-    grid-template-areas:
+    .layout {
+        display: grid;
+        grid-template-areas:
       "header header"
       "main aside"
       "footer footer";
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto 1fr auto;
-  }
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
 
-  header { grid-area: header; }
-  main { grid-area: main; }
-  aside { grid-area: aside; }
-  footer { grid-area: footer; }
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    footer {
+        grid-area: footer;
+    }
 }

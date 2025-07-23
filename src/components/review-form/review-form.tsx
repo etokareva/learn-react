@@ -43,8 +43,8 @@ export const ReviewForm = () => {
                 />
             </div>
             <button className={styles.clearButton}
-                type="button"
-                onClick={clearForm}
+                    type="button"
+                    onClick={clearForm}
             >
                 Очистить
             </button>

@@ -1,44 +1,44 @@
 @import '../../styles/variables.css';
 
 .reviews {
-  margin-top: 2.5rem;
-  padding: 1.5rem;
-  background: var(--color-gray-light);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: var(--color-gray-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 .heading {
-  color: var(--color-primary);
-  padding-bottom: 0.75rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--color-primary);
-  font-size: 1.5rem;
+    color: var(--color-primary);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    font-size: 1.5rem;
 }
 
 .list {
-  list-style: none;
+    list-style: none;
 }
 
 .item {
-  padding: 1.25rem;
-  margin-bottom: 1rem;
-  background: var(--color-light);
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .noReviews {
-  padding: 1.5rem;
-  text-align: center;
-  color: var(--color-gray-dark);
-  background: var(--color-light);
-  border-radius: var(--border-radius);
-  font-style: italic;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--color-gray-dark);
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    font-style: italic;
 }

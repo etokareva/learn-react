@@ -1,12 +1,12 @@
-import { DishCounter } from '../../dish-counter/dish-counter';
+import {DishCounter} from '../../dish-counter/dish-counter';
 import type {MenuItemModel} from '../../models/menu-item.model.ts';
 import styles from './menu.module.css';
 
-export const Menu = ({ menu }: { menu: MenuItemModel[] }) => {
+export const Menu = ({menu}: {menu: MenuItemModel[]}) => {
     return (
         <div className={styles.menu}>
             <ul className={styles.list}>
-                {menu.map(({ name, id, price, ingredients }) => (
+                {menu.map(({name, id, price, ingredients}) => (
                     <li key={id} className={styles.item}>
                         <div>
                             <div className={styles.label}>{name}</div>
@@ -16,7 +16,7 @@ export const Menu = ({ menu }: { menu: MenuItemModel[] }) => {
                             </div>
                         </div>
                         <div className={styles.counterContainer}>
-                            <DishCounter />
+                            <DishCounter/>
                         </div>
                     </li>
                 ))}
