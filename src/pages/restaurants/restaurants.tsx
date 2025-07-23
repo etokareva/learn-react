@@ -1,6 +1,7 @@
 import {Restaurant} from '../../components/restaurant/restaurant.tsx';
 import {Tab} from '../../components/tab/tab.tsx';
 import type {RestaurantPageModel} from '../../models/restaurant-page.model.ts';
+import type {RestaurantModel} from '../../models/restaurant.model.ts';
 import {useActiveRestaurant} from './restaraunt.hook.ts';
 
 export const Restaurants = ({restaurants}: RestaurantPageModel) => {
@@ -23,8 +24,8 @@ export const Restaurants = ({restaurants}: RestaurantPageModel) => {
                     </Tab>
                 ))}
             </div>
-            <Restaurant key={activeRestaurant.id}
-                        restaurant={activeRestaurant}
+            <Restaurant key={activeRestaurant?.id}
+                        restaurant={activeRestaurant as RestaurantModel}
             />
         </>
     );
