@@ -1,0 +1,25 @@
+@import '../../styles/variables.css';
+
+.tab {
+    padding: 12px 20px;
+    background: var(--color-light);
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab:hover {
+    background: var(--color-gray-light);
+}
+
+.tabActive {
+    border-bottom: 3px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.tab:disabled {
+    cursor: default;
+    color: var(--color-primary);
+}

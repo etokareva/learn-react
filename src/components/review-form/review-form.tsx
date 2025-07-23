@@ -1,4 +1,5 @@
 import {useReviewForm} from './review-form.hook';
+import styles from './review-form.module.css';
 
 export const ReviewForm = () => {
     const {
@@ -11,7 +12,7 @@ export const ReviewForm = () => {
 
     return (
         <form onSubmit={(e) => e.preventDefault()}>
-            <div className="form-group">
+            <div className={styles.formGroup}>
                 <label>Имя</label>
                 <input
                     type="text"
@@ -19,14 +20,14 @@ export const ReviewForm = () => {
                     onChange={(event) => setName(event.target.value)}
                 />
             </div>
-            <div className="form-group">
+            <div className={styles.formGroup}>
                 <label>Текст</label>
                 <textarea
                     value={text}
                     onChange={(event) => setText(event.target.value)}
                 />
             </div>
-            <div className="form-group">
+            <div className={styles.formGroup}>
                 <label>Оценка (1 - 5)</label>
                 <input
                     type="number"
@@ -41,7 +42,7 @@ export const ReviewForm = () => {
                     }}
                 />
             </div>
-            <button
+            <button className={styles.clearButton}
                 type="button"
                 onClick={clearForm}
             >

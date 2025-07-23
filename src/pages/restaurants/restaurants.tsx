@@ -3,7 +3,7 @@ import {Tab} from '../../components/tab/tab.tsx';
 import type {RestaurantPageModel} from '../../models/restaurant-page.model.ts';
 import {useActiveRestaurant} from './restaraunt.hook.ts';
 
-export const Restaurants = ({restaurants, title}: RestaurantPageModel) => {
+export const Restaurants = ({restaurants}: RestaurantPageModel) => {
     const {activeRestaurant, setActiveRestaurantId} = useActiveRestaurant(restaurants);
 
     const handleSetActiveRestaurantId = (id: string) => {
@@ -14,7 +14,6 @@ export const Restaurants = ({restaurants, title}: RestaurantPageModel) => {
 
     return (
         <>
-            <h1>{title}</h1>
             <div className="restaurant-tabs">
                 {restaurants.map(({name, id}) => (
                     <Tab key={id}
